@@ -1,12 +1,10 @@
 const express = require('express');
-const cors = request('cors')
+const cors = require('cors');
 const routes = require('./routes');
 
 const app = express();
 
-app.cuse(cors());
-// Antes das requisições, ir no corpo da requisição e pegar o JSON e converter
-// em algo entendível pela alicação
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
